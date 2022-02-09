@@ -2,5 +2,6 @@ from django.urls import path, include
 from blog import views
 
 urlpatterns = [
-    path('test/', views.test)
+    path('', views.index), #blogの中のindex
+    path('<slug:pk>/', views.article), #PK=プライマリーキー
 ]
